@@ -11,9 +11,7 @@ import { TicketDetailDomainService } from './domain/ticketDetail.domain.service'
 import { TICKET_DETAIL_REPOSITORY } from './domain/repositories/ticketDetail.repository.interface';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([Ticket, TicketDetail]),
-  ],
+  imports: [TypeOrmModule.forFeature([Ticket, TicketDetail])],
   controllers: [TicketController],
   providers: [
     TicketApplicationService,
@@ -28,4 +26,3 @@ import { TICKET_DETAIL_REPOSITORY } from './domain/repositories/ticketDetail.rep
   exports: [TicketApplicationService],
 })
 export class TicketModule {}
-

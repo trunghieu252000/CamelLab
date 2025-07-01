@@ -1,4 +1,10 @@
-import { IsNumber, IsOptional, IsString, IsBoolean, IsDateString } from 'class-validator';
+import {
+  IsNumber,
+  IsOptional,
+  IsString,
+  IsBoolean,
+  IsDateString,
+} from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class TicketDetailDTO {
@@ -65,4 +71,3 @@ export class TicketDetailDTO {
   @IsNumber()
   version?: number;
 }
-

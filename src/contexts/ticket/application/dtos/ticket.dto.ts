@@ -41,4 +41,4 @@ export class UpdateTicketDto {
   @IsNumber()
   @IsOptional()
   status?: number;
-} 
+}

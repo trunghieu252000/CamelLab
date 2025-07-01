@@ -25,7 +25,7 @@ export class CircuitBreaker {
   private isOpen(operation: string): boolean {
     const failures = this.failures.get(operation) || 0;
     const lastFailure = this.lastFailureTime.get(operation) || 0;
-    
+
     if (failures >= this.threshold) {
       const now = Date.now();
       if (now - lastFailure < this.timeout) {
@@ -36,7 +36,7 @@ export class CircuitBreaker {
         this.lastFailureTime.delete(operation);
       }
     }
-    
+
     return false;
   }
 
@@ -49,4 +49,4 @@ export class CircuitBreaker {
     const currentFailures = this.failures.get(operation) || 0;
     this.failures.set(operation, currentFailures + 1);
   }
-} 
+}

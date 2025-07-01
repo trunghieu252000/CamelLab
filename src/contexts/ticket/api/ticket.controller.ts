@@ -14,20 +14,27 @@ import {
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { TicketApplicationService } from '../application/ticket.application.service';
 import { Ticket } from '../domain/entities/ticket.entity';
-import { CreateTicketDto, UpdateTicketDto } from '../application/dtos/ticket.dto';
+import {
+  CreateTicketDto,
+  UpdateTicketDto,
+} from '../application/dtos/ticket.dto';
 
 @ApiTags('tickets')
 @Controller('tickets')
 export class TicketController {
-  constructor(
-    private readonly ticketAppService: TicketApplicationService,
-  ) {}
+  constructor(private readonly ticketAppService: TicketApplicationService) {}
 
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
   @ApiOperation({ summary: 'Create a new ticket' })
-  @ApiResponse({ status: 201, description: 'Ticket created successfully', type: Ticket })
-  async createTicket(@Body() createTicketDto: CreateTicketDto): Promise<Ticket> {
+  @ApiResponse({
+    status: 201,
+    description: 'Ticket created successfully',
+    type: Ticket,
+  })
+  async createTicket(
+    @Body() createTicketDto: CreateTicketDto,
+  ): Promise<Ticket> {
     return await this.ticketAppService.createTicket(createTicketDto);
   }
 
@@ -41,7 +48,11 @@ export class TicketController {
   @Put(':id')
   @UsePipes(new ValidationPipe({ transform: true }))
   @ApiOperation({ summary: 'Update ticket' })
-  @ApiResponse({ status: 200, description: 'Ticket updated successfully', type: Ticket })
+  @ApiResponse({
+    status: 200,
+    description: 'Ticket updated successfully',
+    type: Ticket,
+  })
   async updateTicket(
     @Param('id') id: string,
     @Body() updateTicketDto: UpdateTicketDto,
@@ -57,4 +68,3 @@ export class TicketController {
     await this.ticketAppService.deleteTicket(id);
   }
 }
-

@@ -14,4 +14,4 @@ export class UpdateProductDto {
 
   @ApiProperty({ required: false })
   description?: string;
-} 
+}

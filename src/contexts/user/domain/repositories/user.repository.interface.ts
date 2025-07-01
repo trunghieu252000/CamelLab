@@ -9,4 +9,4 @@ export interface IUserRepository {
   update(id: string, user: Partial<User>): Promise<User | null>;
   delete(id: string): Promise<void>;
   findAll(): Promise<User[]>;
-} 
+}

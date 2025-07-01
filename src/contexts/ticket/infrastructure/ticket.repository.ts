@@ -19,7 +19,10 @@ export class TicketRepository {
     return await this.ticketRepository.findOne({ where: { id } });
   }
 
-  async update(id: string, ticketData: Partial<Ticket>): Promise<Ticket | null> {
+  async update(
+    id: string,
+    ticketData: Partial<Ticket>,
+  ): Promise<Ticket | null> {
     await this.ticketRepository.update(id, ticketData);
     return await this.findById(parseInt(id));
   }

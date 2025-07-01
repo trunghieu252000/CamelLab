@@ -14,4 +14,3 @@ export default new DataSource({
   migrations: ['src/migrations/*.ts'],
   synchronize: false,
 });
-

@@ -26,4 +26,4 @@ export class OrderApplicationService {
   async getAllOrders(): Promise<Order[]> {
     return this.orderRepository.findAll();
   }
-} 
+}

@@ -51,4 +51,3 @@ export class KafkaService implements OnModuleInit, OnModuleDestroy {
     });
   }
 }
-

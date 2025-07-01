@@ -5,7 +5,11 @@ import { Cache } from 'cache-manager';
 import { v4 as uuidv4 } from 'uuid';
 
 export interface IDistributedLocker {
-  tryLock(lockKey: string, waitTime: number, leaseTime: number): Promise<boolean>;
+  tryLock(
+    lockKey: string,
+    waitTime: number,
+    leaseTime: number,
+  ): Promise<boolean>;
   lock(lockKey: string, leaseTime: number): Promise<void>;
   unlock(lockKey: string): Promise<void>;
   isLocked(lockKey: string): Promise<boolean>;
@@ -13,14 +17,16 @@ export interface IDistributedLocker {
 
 @Injectable()
 export class RedisDistributedLocker implements IDistributedLocker {
-  constructor(
-    @Inject(CACHE_MANAGER) private cacheManager: Cache,
-  ) {}
+  constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {}
 
-  async tryLock(lockKey: string, waitTime: number, leaseTime: number): Promise<boolean> {
+  async tryLock(
+    lockKey: string,
+    waitTime: number,
+    leaseTime: number,
+  ): Promise<boolean> {
     const lockValue = uuidv4();
     const lockName = `lock:${lockKey}`;
-    
+
     try {
       await this.cacheManager.set(lockName, lockValue, leaseTime);
       return true;
@@ -44,4 +50,4 @@ export class RedisDistributedLocker implements IDistributedLocker {
     const lockValue = await this.cacheManager.get(lockName);
     return lockValue !== null && lockValue !== undefined;
   }
-} 
+}

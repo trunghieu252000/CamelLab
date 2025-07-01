@@ -1,4 +1,16 @@
-import { Controller, Get, Post, Put, Delete, Body, Param, HttpCode, HttpStatus, UsePipes, ValidationPipe } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Body,
+  Param,
+  HttpCode,
+  HttpStatus,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { UserApplicationService } from '../application/user.application.service';
 import { User } from '../domain/entities/user.entity';
@@ -14,7 +26,11 @@ export class UserController {
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
   @ApiOperation({ summary: 'Create a new user' })
-  @ApiResponse({ status: 201, description: 'User created successfully', type: User })
+  @ApiResponse({
+    status: 201,
+    description: 'User created successfully',
+    type: User,
+  })
   async createUser(@Body() createUserDto: CreateUserDto): Promise<User> {
     return await this.userApplicationService.createUser(createUserDto);
   }
@@ -29,7 +45,11 @@ export class UserController {
   @Put(':id')
   @UsePipes(new ValidationPipe({ transform: true }))
   @ApiOperation({ summary: 'Update user' })
-  @ApiResponse({ status: 200, description: 'User updated successfully', type: User })
+  @ApiResponse({
+    status: 200,
+    description: 'User updated successfully',
+    type: User,
+  })
   async updateUser(
     @Param('id') id: string,
     @Body() updateUserDto: UpdateUserDto,
@@ -47,8 +67,12 @@ export class UserController {
 
   @Get()
   @ApiOperation({ summary: 'Get all users' })
-  @ApiResponse({ status: 200, description: 'Users retrieved successfully', type: [User] })
+  @ApiResponse({
+    status: 200,
+    description: 'Users retrieved successfully',
+    type: [User],
+  })
   async getAllUsers(): Promise<User[]> {
     return await this.userApplicationService.getAllUsers();
   }
-} 
+}

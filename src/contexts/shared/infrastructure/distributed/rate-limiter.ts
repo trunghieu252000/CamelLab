@@ -6,4 +6,4 @@ export class RateLimiter {
   isAllowed(key: string): boolean {
     return true;
   }
-} 
+}

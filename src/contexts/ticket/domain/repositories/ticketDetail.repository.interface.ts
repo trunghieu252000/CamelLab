@@ -7,7 +7,10 @@ export interface ITicketDetailRepository {
   save(ticketDetail: TicketDetail): Promise<TicketDetail>;
   updateStock(id: number, stockAvailable: number): Promise<void>;
   create(ticketDetail: Partial<TicketDetail>): Promise<TicketDetail>;
-  update(id: string, ticketDetail: Partial<TicketDetail>): Promise<TicketDetail | null>;
+  update(
+    id: string,
+    ticketDetail: Partial<TicketDetail>,
+  ): Promise<TicketDetail | null>;
   delete(id: string): Promise<boolean>;
   findAll(): Promise<TicketDetail[]>;
-} 
+}

@@ -20,7 +20,10 @@ export class ProductRepository implements IProductRepository {
     return await this.productRepository.findOne({ where: { id } });
   }
 
-  async update(id: string, productData: Partial<Product>): Promise<Product | null> {
+  async update(
+    id: string,
+    productData: Partial<Product>,
+  ): Promise<Product | null> {
     await this.productRepository.update(id, productData);
     return await this.findById(id);
   }
@@ -32,4 +35,4 @@ export class ProductRepository implements IProductRepository {
   async findAll(): Promise<Product[]> {
     return await this.productRepository.find();
   }
-} 
+}

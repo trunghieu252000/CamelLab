@@ -29,7 +29,10 @@ export class TicketDetailRepository implements ITicketDetailRepository {
     return await this.repository.save(entity);
   }
 
-  async update(id: string, ticketDetail: Partial<TicketDetail>): Promise<TicketDetail | null> {
+  async update(
+    id: string,
+    ticketDetail: Partial<TicketDetail>,
+  ): Promise<TicketDetail | null> {
     await this.repository.update(id, ticketDetail);
     return await this.findById(parseInt(id));
   }

@@ -5,9 +5,7 @@ import { Cache } from 'cache-manager';
 
 @Injectable()
 export class RedisInfrastructureService {
-  constructor(
-    @Inject(CACHE_MANAGER) private cacheManager: Cache,
-  ) {}
+  constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {}
 
   async setString(key: string, value: string): Promise<void> {
     if (!key) return;
@@ -32,7 +30,7 @@ export class RedisInfrastructureService {
     try {
       const result = await this.cacheManager.get(key);
       if (!result) return null;
-      
+
       // Simple object reconstruction
       const obj = new targetClass();
       Object.assign(obj, result);
@@ -74,4 +72,3 @@ export class RedisInfrastructureService {
     }
   }
 }
-

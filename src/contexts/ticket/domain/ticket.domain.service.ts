@@ -4,9 +4,9 @@ import { Ticket } from './entities/ticket.entity';
 
 @Injectable()
 export class TicketDomainService {
-    constructor(private readonly ticketRepository: TicketRepository) {}
+  constructor(private readonly ticketRepository: TicketRepository) {}
 
-    async getTicket(id: number): Promise<Ticket | null> {
-        return this.ticketRepository.findById(id);
-    }
-} 
+  async getTicket(id: number): Promise<Ticket | null> {
+    return this.ticketRepository.findById(id);
+  }
+}

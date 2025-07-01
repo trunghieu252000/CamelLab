@@ -7,9 +7,7 @@ import { User } from './domain/entities/user.entity';
 import { USER_REPOSITORY } from './domain/repositories/user.repository.interface';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([User]),
-  ],
+  imports: [TypeOrmModule.forFeature([User])],
   controllers: [UserController],
   providers: [
     UserApplicationService,
@@ -21,4 +19,4 @@ import { USER_REPOSITORY } from './domain/repositories/user.repository.interface
   ],
   exports: [UserApplicationService],
 })
-export class UserModule {} 
+export class UserModule {}

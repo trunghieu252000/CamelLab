@@ -15,5 +15,4 @@ import { CacheModule } from '@nestjs/cache-manager';
   ],
   exports: [CacheModule],
 })
-export class RedisConfig {} 
-
+export class RedisConfig {}

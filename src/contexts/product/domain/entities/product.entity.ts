@@ -14,4 +14,4 @@ export class Product {
   @ApiProperty({ required: false })
   @Column({ nullable: true })
   description?: string;
-} 
+}

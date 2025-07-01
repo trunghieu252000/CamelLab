@@ -5,9 +5,7 @@ import { CreateTicketDto, UpdateTicketDto } from './dtos/ticket.dto';
 
 @Injectable()
 export class TicketApplicationService {
-  constructor(
-    private readonly ticketRepository: TicketRepository,
-  ) {}
+  constructor(private readonly ticketRepository: TicketRepository) {}
 
   async createTicket(createTicketDto: CreateTicketDto): Promise<Ticket> {
     return await this.ticketRepository.create(createTicketDto);
@@ -17,7 +15,10 @@ export class TicketApplicationService {
     return await this.ticketRepository.findById(parseInt(id));
   }
 
-  async updateTicket(id: string, updateTicketDto: UpdateTicketDto): Promise<Ticket | null> {
+  async updateTicket(
+    id: string,
+    updateTicketDto: UpdateTicketDto,
+  ): Promise<Ticket | null> {
     return await this.ticketRepository.update(id, updateTicketDto);
   }
 
@@ -29,4 +30,3 @@ export class TicketApplicationService {
     return await this.getTicket(ticketId);
   }
 }
-

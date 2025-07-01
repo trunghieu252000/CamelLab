@@ -15,7 +15,10 @@ export class ProductApplicationService {
     return this.productRepository.findById(id);
   }
 
-  async updateProduct(id: string, dto: UpdateProductDto): Promise<Product | null> {
+  async updateProduct(
+    id: string,
+    dto: UpdateProductDto,
+  ): Promise<Product | null> {
     return this.productRepository.update(id, dto);
   }
 
@@ -26,4 +29,4 @@ export class ProductApplicationService {
   async getAllProducts(): Promise<Product[]> {
     return this.productRepository.findAll();
   }
-} 
+}

@@ -32,4 +32,4 @@ export class OrderRepository implements IOrderRepository {
   async findAll(): Promise<Order[]> {
     return await this.orderRepository.find();
   }
-} 
+}

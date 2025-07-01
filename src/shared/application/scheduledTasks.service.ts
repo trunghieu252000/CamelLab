@@ -21,4 +21,4 @@ export class ScheduledTasksService {
   async handleSixHourTask() {
     this.logger.debug('Running six-hour scheduled task');
   }
-} 
+}

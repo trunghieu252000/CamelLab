@@ -8,4 +8,4 @@ export class HealthController {
   check(): string {
     return 'OK';
   }
-} 
+}

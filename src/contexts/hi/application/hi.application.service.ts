@@ -3,9 +3,7 @@ import { HiDomainService } from '../domain/hi.domain.service';
 
 @Injectable()
 export class HiApplicationService {
-  constructor(
-    private readonly hiDomainService: HiDomainService,
-  ) {}
+  constructor(private readonly hiDomainService: HiDomainService) {}
 
   async getHello(): Promise<string> {
     return this.hiDomainService.getHello();
@@ -22,4 +20,4 @@ export class HiApplicationService {
   async testQuery(name: string, age: number): Promise<string> {
     return this.hiDomainService.testQuery(name, age);
   }
-} 
+}

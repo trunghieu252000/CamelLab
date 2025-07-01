@@ -4,7 +4,11 @@ import { Injectable } from '@nestjs/common';
 export class RateLimiter {
   private limits = new Map<string, { count: number; resetTime: number }>();
 
-  async checkLimit(key: string, limit: number = 10, windowMs: number = 60000): Promise<boolean> {
+  async checkLimit(
+    key: string,
+    limit: number = 10,
+    windowMs: number = 60000,
+  ): Promise<boolean> {
     const now = Date.now();
     const limitInfo = this.limits.get(key);
 

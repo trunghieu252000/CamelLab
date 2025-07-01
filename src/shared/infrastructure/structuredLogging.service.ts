@@ -28,7 +28,7 @@ export class StructuredLoggingService {
       data,
       timestamp: new Date().toISOString(),
     };
-    
+
     this.logger.log(JSON.stringify(logData));
   }
 
@@ -42,7 +42,7 @@ export class StructuredLoggingService {
       context,
       timestamp: new Date().toISOString(),
     };
-    
+
     this.logger.error(JSON.stringify(logData));
   }
-} 
+}

@@ -51,4 +51,3 @@ export class TicketDetailDomainService {
     return true;
   }
 }
-

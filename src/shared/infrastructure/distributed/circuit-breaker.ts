@@ -2,12 +2,15 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class CircuitBreaker {
-  private states = new Map<string, {
-    state: 'CLOSED' | 'OPEN' | 'HALF_OPEN';
-    failureCount: number;
-    lastFailureTime: number;
-    successCount: number;
-  }>();
+  private states = new Map<
+    string,
+    {
+      state: 'CLOSED' | 'OPEN' | 'HALF_OPEN';
+      failureCount: number;
+      lastFailureTime: number;
+      successCount: number;
+    }
+  >();
 
   private readonly failureThreshold = 5;
   private readonly timeoutMs = 60000;

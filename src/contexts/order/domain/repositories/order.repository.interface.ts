@@ -8,4 +8,4 @@ export interface IOrderRepository {
   update(id: string, order: Partial<Order>): Promise<Order | null>;
   delete(id: string): Promise<void>;
   findAll(): Promise<Order[]>;
-} 
+}

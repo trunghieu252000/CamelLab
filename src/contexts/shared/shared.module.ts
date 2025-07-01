@@ -6,4 +6,4 @@ import { RateLimiter } from './infrastructure/distributed/rate-limiter';
   providers: [CircuitBreaker, RateLimiter],
   exports: [CircuitBreaker, RateLimiter],
 })
-export class SharedModule {} 
+export class SharedModule {}

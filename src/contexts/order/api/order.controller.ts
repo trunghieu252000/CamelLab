@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Body,
+  Param,
+} from '@nestjs/common';
 import { OrderApplicationService } from '../application/order.application.service';
 import { CreateOrderDto, UpdateOrderDto } from '../application/dtos/order.dto';
 import { Order } from '../domain/entities/order.entity';
@@ -18,7 +26,10 @@ export class OrderController {
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() dto: UpdateOrderDto): Promise<Order | null> {
+  async update(
+    @Param('id') id: string,
+    @Body() dto: UpdateOrderDto,
+  ): Promise<Order | null> {
     return this.orderService.updateOrder(id, dto);
   }
 
@@ -31,4 +42,4 @@ export class OrderController {
   async findAll(): Promise<Order[]> {
     return this.orderService.getAllOrders();
   }
-} 
+}

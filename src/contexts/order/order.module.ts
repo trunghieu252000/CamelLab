@@ -19,5 +19,4 @@ import { OrderController } from './api/order.controller';
   ],
   exports: [OrderApplicationService],
 })
-export class OrderModule {} 
-
+export class OrderModule {}

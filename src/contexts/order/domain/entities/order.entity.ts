@@ -7,4 +7,4 @@ export class Order {
 
   @Column()
   description: string;
-} 
+}

@@ -5,9 +5,7 @@ import { CreateUserDto, UpdateUserDto } from './dtos/user.dto';
 
 @Injectable()
 export class UserApplicationService {
-  constructor(
-    private readonly userRepository: UserRepository,
-  ) {}
+  constructor(private readonly userRepository: UserRepository) {}
 
   async createUser(createUserDto: CreateUserDto): Promise<User> {
     return await this.userRepository.create(createUserDto);
@@ -21,7 +19,10 @@ export class UserApplicationService {
     return await this.userRepository.findByEmail(email);
   }
 
-  async updateUser(id: string, updateUserDto: UpdateUserDto): Promise<User | null> {
+  async updateUser(
+    id: string,
+    updateUserDto: UpdateUserDto,
+  ): Promise<User | null> {
     return await this.userRepository.update(id, updateUserDto);
   }
 
@@ -32,4 +33,4 @@ export class UserApplicationService {
   async getAllUsers(): Promise<User[]> {
     return await this.userRepository.findAll();
   }
-} 
+}
