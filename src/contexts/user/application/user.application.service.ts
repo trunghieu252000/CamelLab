@@ -32,5 +32,4 @@ export class UserApplicationService {
   async getAllUsers(): Promise<User[]> {
     return await this.userRepository.findAll();
   }
-} // auto-commit 11
-// auto-commit 70
+} 

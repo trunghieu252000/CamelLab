@@ -15,5 +15,5 @@ import { CacheModule } from '@nestjs/cache-manager';
   ],
   exports: [CacheModule],
 })
-export class RedisConfig {} // auto-commit 55
-// auto-commit 114
+export class RedisConfig {} 
+

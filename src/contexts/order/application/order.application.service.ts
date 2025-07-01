@@ -26,6 +26,4 @@ export class OrderApplicationService {
   async getAllOrders(): Promise<Order[]> {
     return this.orderRepository.findAll();
   }
-} // auto-commit 3
-// auto-commit 62
-// auto-commit 121
+} 

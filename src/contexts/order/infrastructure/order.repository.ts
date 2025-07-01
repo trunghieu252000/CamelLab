@@ -32,6 +32,4 @@ export class OrderRepository implements IOrderRepository {
   async findAll(): Promise<Order[]> {
     return await this.orderRepository.find();
   }
-} // auto-commit 5
-// auto-commit 64
-// auto-commit 123
+} 

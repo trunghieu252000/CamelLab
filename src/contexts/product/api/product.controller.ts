@@ -38,5 +38,4 @@ export class ProductController {
   async findAll(): Promise<Product[]> {
     return this.productService.getAllProducts();
   }
-} // auto-commit 19
-// auto-commit 78
+}

@@ -57,5 +57,4 @@ export class TicketController {
     await this.ticketAppService.deleteTicket(id);
   }
 }
-// auto-commit 26
-// auto-commit 85
+

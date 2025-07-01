@@ -8,13 +8,8 @@ import { SharedModule } from '../shared/shared.module';
 
 @Module({
   imports: [HttpModule, SharedModule],
-  providers: [
-    HiRepository,
-    HiDomainService,
-    HiApplicationService,
-  ],
+  providers: [HiRepository, HiDomainService, HiApplicationService],
   controllers: [HiController],
   exports: [],
 })
-export class HiModule {} // auto-commit 38
-// auto-commit 97
+export class HiModule {}

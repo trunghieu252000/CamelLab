@@ -45,5 +45,4 @@ export class StructuredLoggingService {
     
     this.logger.error(JSON.stringify(logData));
   }
-} // auto-commit 57
-// auto-commit 116
+} 

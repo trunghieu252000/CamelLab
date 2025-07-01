@@ -52,5 +52,3 @@ async function bootstrap() {
   console.log(`Application is running on: http://localhost:${port}`);
 }
 bootstrap();
-// auto-commit 44
-// auto-commit 103

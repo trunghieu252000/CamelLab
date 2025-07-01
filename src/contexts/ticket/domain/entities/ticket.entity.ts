@@ -26,5 +26,4 @@ export class Ticket {
   @UpdateDateColumn()
   updatedAt: Date;
 }
-// auto-commit 36
-// auto-commit 95
+

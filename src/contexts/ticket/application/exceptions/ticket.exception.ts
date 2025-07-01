@@ -16,5 +16,4 @@ export class TicketOrderException extends HttpException {
   constructor(message: string) {
     super(message, HttpStatus.BAD_REQUEST);
   }
-} // auto-commit 27
-// auto-commit 86
+}

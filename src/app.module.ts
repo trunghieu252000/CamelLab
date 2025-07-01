@@ -45,5 +45,3 @@ import { SharedModule } from './contexts/shared/shared.module';
   providers: [RedisConfig, ScheduledTasksService, StructuredLoggingService],
 })
 export class AppModule {}
-// auto-commit 58
-// auto-commit 117

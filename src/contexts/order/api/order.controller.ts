@@ -31,6 +31,4 @@ export class OrderController {
   async findAll(): Promise<Order[]> {
     return this.orderService.getAllOrders();
   }
-} // auto-commit 2
-// auto-commit 61
-// auto-commit 120
+} 

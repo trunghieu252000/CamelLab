@@ -43,5 +43,3 @@ export class TicketDetailRepository implements ITicketDetailRepository {
     return await this.repository.find();
   }
 }
-// auto-commit 32
-// auto-commit 91

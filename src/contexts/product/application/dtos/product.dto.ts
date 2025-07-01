@@ -14,5 +14,4 @@ export class UpdateProductDto {
 
   @ApiProperty({ required: false })
   description?: string;
-} // auto-commit 21
-// auto-commit 80
+} 

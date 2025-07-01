@@ -44,5 +44,4 @@ export class RedisDistributedLocker implements IDistributedLocker {
     const lockValue = await this.cacheManager.get(lockName);
     return lockValue !== null && lockValue !== undefined;
   }
-} // auto-commit 51
-// auto-commit 110
+} 

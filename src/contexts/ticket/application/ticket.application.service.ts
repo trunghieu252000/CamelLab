@@ -29,5 +29,4 @@ export class TicketApplicationService {
     return await this.getTicket(ticketId);
   }
 }
-// auto-commit 30
-// auto-commit 89
+

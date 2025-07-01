@@ -8,5 +8,4 @@ export interface IProductRepository {
   update(id: string, product: Partial<Product>): Promise<Product | null>;
   delete(id: string): Promise<void>;
   findAll(): Promise<Product[]>;
-} // auto-commit 23
-// auto-commit 82
+} 

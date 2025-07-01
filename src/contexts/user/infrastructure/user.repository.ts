@@ -36,5 +36,4 @@ export class UserRepository implements IUserRepository {
   async findAll(): Promise<User[]> {
     return await this.userRepository.find();
   }
-} // auto-commit 12
-// auto-commit 71
+} 

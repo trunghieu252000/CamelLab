@@ -19,5 +19,4 @@ import { ProductController } from './api/product.controller';
   ],
   exports: [ProductApplicationService],
 })
-export class ProductModule {} // auto-commit 18
-// auto-commit 77
+export class ProductModule {}

@@ -51,6 +51,4 @@ export class UserController {
   async getAllUsers(): Promise<User[]> {
     return await this.userApplicationService.getAllUsers();
   }
-} // auto-commit 9
-// auto-commit 68
-// auto-commit 127
+} 

@@ -14,5 +14,4 @@ export class Product {
   @ApiProperty({ required: false })
   @Column({ nullable: true })
   description?: string;
-} // auto-commit 24
-// auto-commit 83
+} 

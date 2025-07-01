@@ -28,5 +28,4 @@ import { TICKET_DETAIL_REPOSITORY } from './domain/repositories/ticketDetail.rep
   exports: [TicketApplicationService],
 })
 export class TicketModule {}
-// auto-commit 25
-// auto-commit 84
+

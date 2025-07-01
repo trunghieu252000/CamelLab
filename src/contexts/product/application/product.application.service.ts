@@ -26,5 +26,4 @@ export class ProductApplicationService {
   async getAllProducts(): Promise<Product[]> {
     return this.productRepository.findAll();
   }
-} // auto-commit 20
-// auto-commit 79
+} 

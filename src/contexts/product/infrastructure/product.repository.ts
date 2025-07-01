@@ -32,5 +32,4 @@ export class ProductRepository implements IProductRepository {
   async findAll(): Promise<Product[]> {
     return await this.productRepository.find();
   }
-} // auto-commit 22
-// auto-commit 81
+} 

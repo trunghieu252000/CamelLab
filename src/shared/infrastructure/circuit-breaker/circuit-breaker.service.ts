@@ -49,5 +49,4 @@ export class CircuitBreaker {
     const currentFailures = this.failures.get(operation) || 0;
     this.failures.set(operation, currentFailures + 1);
   }
-} // auto-commit 56
-// auto-commit 115
+} 

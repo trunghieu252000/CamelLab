@@ -14,5 +14,4 @@ export default new DataSource({
   migrations: ['src/migrations/*.ts'],
   synchronize: false,
 });
-// auto-commit 59
-// auto-commit 118
+

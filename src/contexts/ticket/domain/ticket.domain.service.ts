@@ -9,5 +9,4 @@ export class TicketDomainService {
     async getTicket(id: number): Promise<Ticket | null> {
         return this.ticketRepository.findById(id);
     }
-} // auto-commit 33
-// auto-commit 92
+} 

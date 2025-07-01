@@ -31,5 +31,4 @@ export class TicketRepository {
   async findAll(): Promise<Ticket[]> {
     return await this.ticketRepository.find();
   }
-} // auto-commit 31
-// auto-commit 90
+}

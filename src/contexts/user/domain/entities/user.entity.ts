@@ -34,5 +34,4 @@ export class User {
   @ApiProperty()
   @UpdateDateColumn()
   updatedAt: Date;
-} // auto-commit 14
-// auto-commit 73
+} 

@@ -65,5 +65,4 @@ export class TicketDetailDTO {
   @IsNumber()
   version?: number;
 }
-// auto-commit 28
-// auto-commit 87
+

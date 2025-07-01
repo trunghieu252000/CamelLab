@@ -22,5 +22,4 @@ export class HiApplicationService {
   async testQuery(name: string, age: number): Promise<string> {
     return this.hiDomainService.testQuery(name, age);
   }
-} // auto-commit 40
-// auto-commit 99
+} 

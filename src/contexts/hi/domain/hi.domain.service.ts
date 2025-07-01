@@ -18,5 +18,4 @@ export class HiDomainService {
     return `Hello ${name}, you are ${age} years old`;
   }
 }
-// auto-commit 43
-// auto-commit 102
+

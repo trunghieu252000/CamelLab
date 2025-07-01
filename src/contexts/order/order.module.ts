@@ -19,6 +19,5 @@ import { OrderController } from './api/order.controller';
   ],
   exports: [OrderApplicationService],
 })
-export class OrderModule {} // auto-commit 1
-// auto-commit 60
-// auto-commit 119
+export class OrderModule {} 
+

@@ -27,7 +27,6 @@ export class TicketDetailDomainService {
       throw new Error('No stock available');
     }
 
-    // Update stock
     await this.ticketDetailRepository.updateStock(
       ticketId,
       ticketDetail.stockAvailable - 1,
@@ -37,24 +36,19 @@ export class TicketDetailDomainService {
   }
 
   async getTicketDetail(id: string): Promise<any> {
-    // Domain logic for getting ticket detail
     return { id, status: 'active', createdAt: new Date() };
   }
 
   async createTicketDetail(data: any): Promise<any> {
-    // Domain logic for creating ticket detail
     return { ...data, id: 'generated-id', createdAt: new Date() };
   }
 
   async updateTicketDetail(id: string, data: any): Promise<any> {
-    // Domain logic for updating ticket detail
     return { ...data, id, updatedAt: new Date() };
   }
 
   async deleteTicketDetail(id: string): Promise<boolean> {
-    // Domain logic for deleting ticket detail
     return true;
   }
 }
-// auto-commit 35
-// auto-commit 94
+

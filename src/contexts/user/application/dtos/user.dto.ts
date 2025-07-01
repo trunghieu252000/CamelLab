@@ -50,6 +50,4 @@ export class UpdateUserDto {
   @IsOptional()
   @IsBoolean()
   isActive?: boolean;
-} // auto-commit 10
-// auto-commit 69
-// auto-commit 128
+} 

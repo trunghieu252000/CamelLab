@@ -6,5 +6,4 @@ import { RateLimiter } from './infrastructure/distributed/rate-limiter';
   providers: [CircuitBreaker, RateLimiter],
   exports: [CircuitBreaker, RateLimiter],
 })
-export class SharedModule {} // auto-commit 15
-// auto-commit 74
+export class SharedModule {} 

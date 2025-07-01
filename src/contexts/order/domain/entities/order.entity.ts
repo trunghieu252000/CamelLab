@@ -7,6 +7,4 @@ export class Order {
 
   @Column()
   description: string;
-} // auto-commit 7
-// auto-commit 66
-// auto-commit 125
+} 

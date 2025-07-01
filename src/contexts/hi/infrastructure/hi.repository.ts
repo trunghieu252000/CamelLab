@@ -7,5 +7,3 @@ export class HiRepository implements IHiRepository {
     return 'Hi Infrastructure';
   }
 }
-// auto-commit 41
-// auto-commit 100

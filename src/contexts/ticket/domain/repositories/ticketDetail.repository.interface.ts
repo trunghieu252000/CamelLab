@@ -10,5 +10,4 @@ export interface ITicketDetailRepository {
   update(id: string, ticketDetail: Partial<TicketDetail>): Promise<TicketDetail | null>;
   delete(id: string): Promise<boolean>;
   findAll(): Promise<TicketDetail[]>;
-} // auto-commit 34
-// auto-commit 93
+} 

@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Query, HttpCode, HttpStatus, HttpException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Query } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { HiApplicationService } from '../application/hi.application.service';
 import { CircuitBreaker } from '../../shared/infrastructure/circuit-breaker/circuit-breaker.service';
@@ -35,10 +35,10 @@ export class HiController {
   @Get('query/test')
   @ApiOperation({ summary: 'Test query parameters' })
   @ApiResponse({ status: 200, description: 'Query test successful' })
-  async testQuery(@Query('name') name: string, @Query('age') age: number): Promise<string> {
+  async testQuery(
+    @Query('name') name: string,
+    @Query('age') age: number,
+  ): Promise<string> {
     return await this.hiApplicationService.testQuery(name, age);
   }
-
 }
-// auto-commit 39
-// auto-commit 98

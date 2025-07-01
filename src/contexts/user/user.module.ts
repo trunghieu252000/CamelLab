@@ -21,6 +21,4 @@ import { USER_REPOSITORY } from './domain/repositories/user.repository.interface
   ],
   exports: [UserApplicationService],
 })
-export class UserModule {} // auto-commit 8
-// auto-commit 67
-// auto-commit 126
+export class UserModule {} 
